@@ -1,9 +1,9 @@
 const print = console.log;
 
 const first = array => {
-  return (array != null && array.length)
-  ? array[0]
-  : undefined
+  return (array != null && array.length) // 判断输入值是否为数组、字符串、类数组对象且长度大于0
+  ? array[0]  // 数组、字符串、类数组对象且长度大于1的返回第一个元素。
+  : undefined // 否则，返回undefined
 }
 
 print(`01：['1', '2'] => \n`, first(['1', '2']));
