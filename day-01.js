@@ -40,3 +40,5 @@ print('15：false => \n', isLength(false));
 // => false
 print('16：null => \n', isLength(null));
 // => false
+print('17：undefined => \n', isLength(undefined));
+// => false
