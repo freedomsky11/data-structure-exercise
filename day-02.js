@@ -2,9 +2,9 @@ const print = console.log;
 
 const clamp = (number, lower, upper) => {
    number = +number; // 将非数值参数转成数值类型, 对于不支持转成数字的值则转成NaN
-   upper = upper === true || +upper === NaN ? 0 : +upper; // 将非数值参数转成数值类型, 对于不支持转成数字的值及true转成0
-   lower = lower === true || +lower === NaN ? 0 : +lower; // 将非数值参数转成数值类型, 对于不支持转成数字的值及true转成0
-   if (number !== NaN) { // 若number不能转换成数值则不作处理
+   upper = upper === true || +upper !== +upper ? 0 : +upper; // 将非数值参数转成数值类型, 对于不支持转成数字的值及true转成0
+   lower = lower === true || +lower !== +lower  ? 0 : +lower; // 将非数值参数转成数值类型, 对于不支持转成数字的值及true转成0
+   if (number === number) { // 若number不能转换成数值则不作处理
      number = number > upper ? upper : number; // 大于上限则取上限
      number = number < lower ? lower : number; // 小于下限则取下限，若上限小于下限则此处一并处理
    }
