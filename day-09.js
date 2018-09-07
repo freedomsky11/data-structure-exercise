@@ -1,9 +1,9 @@
 const print = console.log;
 
 const isObject = val => {
-  return val != null &&
-  typeof val === "object" ||
-  typeof val === 'function'
+  return val != null && // 排除掉typeof null == 'object' => true的情况，及顺道排除undefined
+  typeof val === "object" || // object类型为true
+  typeof val === 'function' // function本质也是对象
 }
 
 print(isObject({}));
