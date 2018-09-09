@@ -1,6 +1,6 @@
 const print = console.log;
 
-let invert = val => {
+const invert = val => {
   let newObj = {}; // 生成新的对象
   for (let key in val) { // 遍历原有对象可枚举属性，使用该方法会排除掉对象外的值
     if (val.hasOwnProperty(key)) { // 判断属性是否为自有属性

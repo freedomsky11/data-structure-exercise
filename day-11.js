@@ -1,6 +1,6 @@
 const print = console.log;
 
-let mapObject = (object, iteratee) => {
+const mapObject = (object, iteratee) => {
   let array = []; // 生成新的数组
   let idx = 0; // 生成新的索引
   iteratee = typeof iteratee === 'function' ? iteratee : val => val;// 判断iteratee是否传入及是否为函数，若没有或不是函数则直接返回属性值
